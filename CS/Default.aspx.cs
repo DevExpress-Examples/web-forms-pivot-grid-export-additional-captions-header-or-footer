@@ -47,14 +47,14 @@ namespace S130793 {
         {
             Link l = sender as Link;
             TextBrick tb = new TextBrick();
-            tb.Text = "text caption";
+            tb.Text = "Custom Header";
             tb.StringFormat = new BrickStringFormat(StringAlignment.Center);
             tb.Rect = new RectangleF(0, 0, l.PrintingSystem.Graph.ClientPageSize.Width, 20);
             tb.Sides = BorderSide.None;
             e.Graph.DrawBrick(tb);
 
             tb = new TextBrick();
-            tb.Text = "text sub caption";
+            tb.Text = "Custom SubHeader";
             tb.StringFormat = new BrickStringFormat(StringAlignment.Center);
             tb.Rect = new RectangleF(0, 20, l.PrintingSystem.Graph.ClientPageSize.Width, 20);
             tb.Sides = BorderSide.None;
