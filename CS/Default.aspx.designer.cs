@@ -65,7 +65,7 @@ namespace S130793 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxPivotGrid.Export.ASPxPivotGridExporter ASPxPivotGridExporter1;
+        protected global::DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter ASPxPivotGridExporter1;
         
         /// <summary>
         /// AccessDataSource1 control.
