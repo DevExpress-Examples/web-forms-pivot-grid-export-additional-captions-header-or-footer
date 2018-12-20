@@ -4,7 +4,7 @@
 * [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
 * **[Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx](./VB/Default.aspx))**
 <!-- default file list end -->
-# Export ASPxPivotGrid with additional text captions in header or footer
+# Export ASPxPivotGrid to PDF and add text captions to the header
 
 
 This example illustrates how to add header to the document exported to PDF.
