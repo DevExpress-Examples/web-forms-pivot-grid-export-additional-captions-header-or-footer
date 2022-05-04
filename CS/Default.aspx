@@ -1,7 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="S130793._Default" %>
 
-<%@ Register assembly="DevExpress.Web.ASPxPivotGrid.v18.2, Version=18.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxPivotGrid" tagprefix="dx" %>
-<%@ Register assembly="DevExpress.Web.ASPxPivotGrid.v18.2, Version=18.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxPivotGrid" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.ASPxPivotGrid.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxPivotGrid" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.ASPxPivotGrid.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxPivotGrid" tagprefix="dx" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -14,23 +14,25 @@
     <div>
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Export" />
         <dx:ASPxPivotGrid ID="ASPxPivotGrid1" runat="server" 
-            DataSourceID="AccessDataSource1">
+            DataSourceID="SqlDataSource1" ClientIDMode="AutoID" IsMaterialDesign="False">
             <Fields>
-                <dx:PivotGridField ID="fieldCategoryName" Area="RowArea" AreaIndex="0" 
-                    FieldName="CategoryName">
+                <dx:PivotGridField ID="field1" Area="RowArea" AreaIndex="0" Name="field1">
+                    <DataBindingSerializable>
+                        <dx:DataSourceColumnBinding ColumnName="CategoryName" />
+                    </DataBindingSerializable>
                 </dx:PivotGridField>
-                <dx:PivotGridField ID="fieldProductSales" Area="DataArea" AreaIndex="0" 
-                    FieldName="ProductSales">
+                <dx:PivotGridField ID="field" Area="DataArea" AreaIndex="0" Caption="ProductSales" Name="field">
+                    <DataBindingSerializable>
+                        <dx:DataSourceColumnBinding ColumnName="ProductSales" />
+                    </DataBindingSerializable>
                 </dx:PivotGridField>
             </Fields>
+            <OptionsData DataProcessingEngine="Optimized" />
         </dx:ASPxPivotGrid>
         <dx:ASPxPivotGridExporter ID="ASPxPivotGridExporter1" runat="server" 
             ASPxPivotGridID="ASPxPivotGrid1">
         </dx:ASPxPivotGridExporter>
-        <asp:AccessDataSource ID="AccessDataSource1" runat="server" DataFile="~/App_Data/nwind.mdb"
-            SelectCommand="SELECT [CategoryName], [ProductSales] FROM [ProductReports]"></asp:AccessDataSource>
-        <br />
-        &nbsp;
+        &nbsp;<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [ProductReports]"></asp:SqlDataSource>
     </div>
     </form>
 </body>
