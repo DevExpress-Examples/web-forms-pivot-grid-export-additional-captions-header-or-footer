@@ -4,20 +4,18 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 <!-- default file list -->
-*Files to look at*:
+# Pivot Grid for Web Forms - How to Add Custom Header to an Exported PDF document
 
-* [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
-* **[Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx](./VB/Default.aspx))**
-<!-- default file list end -->
-# Export ASPxPivotGrid to PDF and add text captions to the header
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e1188/)**
-<!-- run online end -->
+This example illustrates how to add a header to the document exported to PDF.
+
+Run the project and click the **Export** button. The [ASPxPivotGrid](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid) control exports its content to the PDF file, adding two lines of text to the document's header. The same approach enables you to add a custom text to the document's footer.
+
+## Files to Look At
 
 
-This example illustrates how to add header to the document exported to PDF.
-Run the project and click the Export button. The ASPxPivotGrid control exports its content to the PDF file, adding two lines of text to the document's header. The same approach enables you to add a custom text to the document's footer.
+- [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
+- [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx](./VB/Default.aspx))
 
-See also:
+## More Examples
 
-<a href="https://www.devexpress.com/Support/Center/p/T355654">T355654: Data Aware Export - How to add custom header and footer to an exported Excel document</a>.
+- [Pivot Grid for Web Forms - How to add custom header and footer to an exported Excel document](https://github.com/DevExpress-Examples/data-aware-export-how-to-add-custom-header-and-footer-to-an-exported-excel-document-t355654)
