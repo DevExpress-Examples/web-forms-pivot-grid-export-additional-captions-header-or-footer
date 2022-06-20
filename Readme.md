@@ -9,7 +9,7 @@ This example illustrates how to add a header to the document exported to PDF.
 
 ![Pivot Gris for Web Forms - Custom Header for Export](images/pivot-grid-web-forms-export-custom-header.png)
 
-The image below illustrates the resulting pdf file with custom headers:
+The image below illustrates the resulting PDF file with custom headers:
 
 ![Pivot Gris for Web Forms - Custom Header for Export](images/pivot-grid-export-pdf-custom-headers.png)
 
