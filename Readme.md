@@ -11,7 +11,7 @@
 <!-- default file list end -->
 # Export ASPxPivotGrid to PDF and add text captions to the header
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e1188/)**
+**[[Run Online]](https://codecentral.devexpress.com/128577104/)**
 <!-- run online end -->
 
 
