@@ -5,9 +5,6 @@
 <!-- default badges end -->
 <!-- default file list -->
 # Pivot Grid for Web Forms - How to Add a Custom Header to an Exported PDF document
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128577104/)**
-<!-- run online end -->
 
 This example illustrates how to add a header to a document exported to PDF.
 
