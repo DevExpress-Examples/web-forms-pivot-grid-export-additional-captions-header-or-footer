@@ -1,37 +1,31 @@
-﻿Imports System
+Imports System
 Imports DevExpress.XtraPrinting
-Imports DevExpress.XtraCharts.Native
 Imports DevExpress.XtraPrintingLinks
 Imports System.IO
 Imports System.Drawing
 
 Namespace S130793
-    Partial Public Class _Default
-        Inherits System.Web.UI.Page
+
+    Public Partial Class _Default
+        Inherits Web.UI.Page
 
         Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
-
         End Sub
 
         Protected Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs)
-            Dim ps As New PrintingSystem()
-
-            Dim link1 As New PrintableComponentLink()
+            Dim ps As PrintingSystem = New PrintingSystem()
+            Dim link1 As PrintableComponentLink = New PrintableComponentLink()
             link1.Component = ASPxPivotGridExporter1
             link1.PrintingSystem = ps
-
-            Dim link2 As New Link()
-            AddHandler link2.CreateDetailArea, AddressOf link2_CreateDetailArea
+            Dim link2 As Link = New Link()
+            AddHandler link2.CreateDetailArea, New CreateAreaEventHandler(AddressOf link2_CreateDetailArea)
             link2.PrintingSystem = ps
-
-            Dim compositeLink As New CompositeLink()
-            compositeLink.Links.AddRange(New Object() { link2, link1 })
+            Dim compositeLink As CompositeLink = New CompositeLink()
+            compositeLink.Links.AddRange(New Object() {link2, link1})
             compositeLink.PrintingSystem = ps
-
             compositeLink.CreateDocument()
             compositeLink.PrintingSystem.ExportOptions.Pdf.DocumentOptions.Author = "Test"
-
-            Using stream As New MemoryStream()
+            Using stream As MemoryStream = New MemoryStream()
                 compositeLink.PrintingSystem.ExportToPdf(stream)
                 Response.Clear()
                 Response.Buffer = False
@@ -41,18 +35,18 @@ Namespace S130793
                 Response.BinaryWrite(stream.ToArray())
                 Response.End()
             End Using
+
             ps.Dispose()
         End Sub
 
         Private Sub link2_CreateDetailArea(ByVal sender As Object, ByVal e As CreateAreaEventArgs)
             Dim l As Link = TryCast(sender, Link)
-            Dim tb As New TextBrick()
+            Dim tb As TextBrick = New TextBrick()
             tb.Text = "Custom Header"
             tb.StringFormat = New BrickStringFormat(StringAlignment.Center)
             tb.Rect = New RectangleF(0, 0, l.PrintingSystem.Graph.ClientPageSize.Width, 20)
             tb.Sides = BorderSide.None
             e.Graph.DrawBrick(tb)
-
             tb = New TextBrick()
             tb.Text = "Custom SubHeader"
             tb.StringFormat = New BrickStringFormat(StringAlignment.Center)
