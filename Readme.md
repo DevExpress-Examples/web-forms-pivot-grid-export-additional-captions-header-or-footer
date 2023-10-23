@@ -16,8 +16,7 @@ The image below illustrates the resulting PDF file with custom headers:
 
 Run the project and click the **Export** button. The [ASPxPivotGrid](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid) control exports its content to a PDF file, adding two lines of text to the document's header. The same technique enables you to add custom text to the document's footer. To change the header text, change the value of the corresponding [TextBrick](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPrinting.TextBrick).
 
-## Files to Look At
-
+## Files to Review
 
 - [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
 - [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx](./VB/Default.aspx))
