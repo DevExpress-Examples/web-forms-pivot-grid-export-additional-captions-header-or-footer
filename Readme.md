@@ -30,7 +30,7 @@ Run the project and click the **Export** button. The [ASPxPivotGrid](https://doc
 
 - [Pivot Grid for Web Forms - How to add a custom header and footer to an exported Excel document](https://github.com/DevExpress-Examples/data-aware-export-how-to-add-custom-header-and-footer-to-an-exported-excel-document-t355654)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=web-forms-pivot-grid-export-additional-captions-header-or-footer&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=web-forms-pivot-grid-export-additional-captions-header-or-footer&~~~was_helpful=no)
 
